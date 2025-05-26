@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        position: relative;
+        margin: 20px;
+        width: 120px;
+        text-align: center;
+        border-radius: 5%;
+        background: orange;
+        transition-property: width;
+        transition-duration: 1s;
+      }
+      .ease {
+        transition-timing-function: ease;
+      }
+      .linear {
+        transition-timing-function: linear;
+      }
+      .easein {
+        transition-timing-function: ease-in;
+      }
+      .easeout {
+        transition-timing-function: ease-out;
+      }
+      .easeinout {
+        transition-timing-function: ease-in-out;
+      }
+      div:hover {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS transition-timing-function Property</h2>
+    <section style="border: 2px solid slateblue">
+      <div class="ease">EASE</div>
+      <div class="linear">LINEAR</div>
+      <div class="easein">EASE-IN</div>
+      <div class="easeout">EASE-OUT</div>
+      <div class="easeinout">EASE-IN-OUT</div>
+    </section>
+  </body>
+</html>

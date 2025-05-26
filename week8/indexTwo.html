@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .normalval {
+        width: 300px;
+        margin: 10px;
+        padding: 20px;
+        background-color: hotpink;
+        text-align: center;
+      }
+      .skewx1 {
+        width: 250px;
+        height: 40px;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 15px;
+        background-color: chocolate;
+        text-align: center;
+        transform: skewX(-40deg);
+        -ms-transform: skewX(-40deg);
+        -webkit-transform: skewX(-40deg);
+        
+      }
+      .skewx2 {
+        width: 250px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 15px;
+        background-color: lawngreen;
+        text-align: center;
+        transform: skewX(200deg);
+        -ms-transform: skewX(200deg);
+        -webkit-transform: skewX(200deg);
+      }
+    </style>
+  </head>
+
+  <body style="display: block; margin: 20px; ">
+    <p>Skew(x) property defines x value of the object</p>
+    <div class="normalval">1. This is without skewX method</div>
+    <div class="skewx1">2(a) SkewX:-40deg;</div>
+    <div class="skewx2">2(b) SkewX:200deg;</div>
+  </body>
+</html>

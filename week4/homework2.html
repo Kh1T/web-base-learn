@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body style="background-color: #f8d7da; padding: 20px;">
+    <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Student Registration Form</h2>
+
+    <form style="max-width: 600px; margin: 0 auto;">
+
+        <div style="margin-bottom: 15px;">
+            <label for="rollNo" style="display: block; font-weight: bold;">Roll no. :</label>
+            <input type="text" id="rollNo" name="rollNo" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="studentName" style="display: block; font-weight: bold;">Student name :</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" style="padding: 8px; flex: 1; border: 1px solid #ccc; border-radius: 4px;">
+                <span style="margin-top: 8px;">-</span>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" style="padding: 8px; flex: 1; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="fatherName" style="display: block; font-weight: bold;">Father's name :</label>
+            <input type="text" id="fatherName" name="fatherName" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="dob" style="display: block; font-weight: bold;">Date of birth :</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="text" id="day" name="day" placeholder="Day" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;">
+                <span>-</span>
+                <input type="text" id="month" name="month" placeholder="Month" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;">
+                <span>-</span>
+                <input type="text" id="year" name="year" placeholder="Year" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;">
+                <span style="margin-left: 10px;">(DD-MM-YYYY)</span>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="mobileNo" style="display: block; font-weight: bold;">Mobile no. :</label>
+            <div style="display: flex; gap: 5px;">
+                <input type="text" id="countryCode" name="countryCode" value="+91" readonly style="padding: 8px; width: 70px; border: 1px solid #ccc; border-radius: 4px;">
+                <span>-</span>
+                <input type="text" id="mobileNo" name="mobileNo" style="padding: 8px; flex: 1; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </div>
+
+        <!-- Email ID -->
+        <div style="margin-bottom: 15px;">
+            <label for="emailId" style="display: block; font-weight: bold;">Email id :</label>
+            <input type="email" id="emailId" name="emailId" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <!-- Password -->
+        <div style="margin-bottom: 15px;">
+            <label for="password" style="display: block; font-weight: bold;">Password :</label>
+            <input type="password" id="password" name="password" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <!-- Gender -->
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; font-weight: bold;">Gender :</label>
+            <div style="display: flex; gap: 20px;">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+
+        <!-- Department -->
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; font-weight: bold;">Department :</label>
+            <div style="display: flex; gap: 20px;">
+                <label><input type="checkbox" name="department" value="cse"> CSE</label>
+                <label><input type="checkbox" name="department" value="it"> IT</label>
+                <label><input type="checkbox" name="department" value="ece"> ECE</label>
+                <label><input type="checkbox" name="department" value="civil"> Civil</label>
+                <label><input type="checkbox" name="department" value="mech"> Mech</label>
+            </div>
+        </div>
+
+        <!-- Course -->
+        <div style="margin-bottom: 15px;">
+            <label for="course" style="display: block; font-weight: bold;">Course :</label>
+            <select id="course" name="course" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="">--------- Select Current Course's ---------</option>
+                <!-- Add course options here -->
+            </select>
+        </div>
+
+        <!-- Student Photo -->
+        <div style="margin-bottom: 15px;">
+            <label for="studentPhoto" style="display: block; font-weight: bold;">Student photo :</label>
+            <input type="file" id="studentPhoto" name="studentPhoto" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <!-- City -->
+        <div style="margin-bottom: 15px;">
+            <label for="city" style="display: block; font-weight: bold;">City :</label>
+            <input type="text" id="city" name="city" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <!-- Address -->
+        <div style="margin-bottom: 15px;">
+            <label for="address" style="display: block; font-weight: bold;">Address :</label>
+            <textarea id="address" name="address" rows="4" cols="50" style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        </div>
+
+        <!-- Register Button -->
+        <div style="text-align: center;">
+            <button type="submit" style="padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Register</button>
+        </div>
+
+    </form>
+</body>
+</html>

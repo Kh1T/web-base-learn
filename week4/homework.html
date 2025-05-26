@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2 style="text-align: center; color: #663399;">STUDENT REGISTRATION FORM</h2>
+    <form style="background-color: #663399; padding: 20px 20px; border: 1px solid black; width: 100%;">
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="firstName" style="width: 150px; font-weight: bold; color: white;">FIRST NAME</label>
+            <input type="text" id="firstName" name="firstName" style="padding: 5px; width: 200px;" placeholder="(max 30 characters a-z and A-Z)">
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="lastName" style="width: 150px; font-weight: bold; color: white;">LAST NAME</label>
+            <input type="text" id="lastName" name="lastName" style="padding: 5px; width: 200px;" placeholder="(max 30 characters a-z and A-Z)">
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="dob" style="width: 150px; font-weight: bold; color: white;">DATE OF BIRTH</label>
+            <select id="day" name="day" style="padding: 5px; margin-right: 5px;">
+                <option value="">Day</option>
+            </select>
+            <select id="month" name="month" style="padding: 5px; margin-right: 5px;">
+                <option value="">Month</option>
+            </select>
+            <select id="year" name="year" style="padding: 5px;">
+                <option value="">Year</option>
+            </select>
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="email" style="width: 150px; font-weight: bold; color: white;">EMAIL ID</label>
+            <input type="email" id="email" name="email" style="padding: 5px; width: 200px;">
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="mobile" style="width: 150px; font-weight: bold; color: white;">MOBILE NUMBER</label>
+            <input type="tel" id="mobile" name="mobile" style="padding: 5px; width: 200px;" placeholder="(10 digit number)">
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="gender" style="width: 150px; font-weight: bold; color: white;">GENDER</label>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+
+        <!-- Address -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="address" style="width: 150px; font-weight: bold; color: white;">ADDRESS</label>
+            <textarea id="address" name="address" rows="3" cols="30" style="padding: 5px; width: 200px;"></textarea>
+        </div>
+
+        <!-- City -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="city" style="width: 150px; font-weight: bold; color: white;">CITY</label>
+            <input type="text" id="city" name="city" style="padding: 5px; width: 200px;" placeholder="(max 30 characters a-z and A-Z)">
+        </div>
+
+        <!-- PIN Code -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="pincode" style="width: 150px; font-weight: bold; color: white;">PIN CODE</label>
+            <input type="text" id="pincode" name="pincode" style="padding: 5px; width: 200px;" placeholder="(6 digit number)">
+        </div>
+
+        <!-- State -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="state" style="width: 150px; font-weight: bold; color: white;">STATE</label>
+            <input type="text" id="state" name="state" style="padding: 5px; width: 200px;" placeholder="(max 30 characters a-z and A-Z)">
+        </div>
+
+        <!-- Country -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label for="country" style="width: 150px; font-weight: bold; color: white;">COUNTRY</label>
+            <input type="text" id="country" name="country" style="padding: 5px; width: 200px;" value="India">
+        </div>
+
+        <!-- Hobbies -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label style="width: 150px; font-weight: bold; color: white;">HOBBIES</label>
+            <div>
+                <label><input type="checkbox" name="hobby" value="drawing"> Drawing</label>
+                <label><input type="checkbox" name="hobby" value="singing"> Singing</label>
+                <label><input type="checkbox" name="hobby" value="dancing"> Dancing</label>
+                <label><input type="checkbox" name="hobby" value="sketching"> Sketching</label>
+                <label><input type="checkbox" name="hobby" value="others"> Others</label>
+                <input type="text" id="otherHobby" name="otherHobby" style="padding: 5px; width: 100px;" placeholder="Enter hobby">
+            </div>
+        </div>
+
+        <!-- Qualification -->
+        <div style="margin-bottom: 10px; padding-right: 32px;">
+            <label style="font-weight: bold; color: white;">QUALIFICATION</label>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 5px;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid white; padding: 5px;">Sl.No.</th>
+                        <th style="border: 1px solid white; padding: 5px;">Examination</th>
+                        <th style="border: 1px solid white; padding: 5px;">Board</th>
+                        <th style="border: 1px solid white; padding: 5px;">Percentage</th>
+                        <th style="border: 1px solid white; padding: 5px;">Year of Passing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid white; padding: 5px;">1</td>
+                        <td style="border: 1px solid white; padding: 5px;">Class X</td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid white; padding: 5px;">2</td>
+                        <td style="border: 1px solid white; padding: 5px;">Class XII</td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid white; padding: 5px;">3</td>
+                        <td style="border: 1px solid white; padding: 5px;">Graduation</td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid white; padding: 5px;">4</td>
+                        <td style="border: 1px solid white; padding: 5px;">Masters</td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                        <td style="border: 1px solid white; padding: 5px;"><input type="text" style="width: 100%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="text-align: right; color: white; font-size: smaller;">
+                <span>(10 char max)</span>
+                <span>(upto 2 decimal)</span>
+            </div>
+        </div>
+
+        <!-- Courses Applied For -->
+        <div style="display: flex; margin-bottom: 10px;">
+            <label style="width: 150px; font-weight: bold; color: white;">COURSES APPLIED FOR</label>
+            <label><input type="radio" name="course" value="bca"> BCA</label>
+            <label><input type="radio" name="course" value="bcom"> B.Com</label>
+            <label><input type="radio" name="course" value="bsc"> B.Sc</label>
+            <label><input type="radio" name="course" value="ba"> B.A</label>
+        </div>
+
+        <!-- Submit and Reset Buttons -->
+        <div style="text-align: center; margin-top: 10px;">
+            <button type="submit" style="padding: 5px 10px; background-color: #cccccc; border: none; cursor: pointer;">Submit</button>
+            <button type="reset" style="padding: 5px 10px; background-color: #cccccc; border: none; cursor: pointer;">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

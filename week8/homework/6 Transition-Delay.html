@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .transition-delay {
+        margin: auto;
+        width: 80%;
+        background-color: black;
+        color: orange;
+        border: 5px solid;
+        padding: 5px;
+        transition-property: color;
+        transition-duration: 3s;
+        transition-delay: 1s;
+      }
+
+      .transition-delay:hover {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="transition-delay">
+      <h2>When you hover over me, the transition will start after 1s</h2>
+      <p>Text & Border will start changing after a delay of 1s</p>
+    </div>
+  </body>
+</html>

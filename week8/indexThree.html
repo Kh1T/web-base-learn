@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .normalval {
+        width: 200px;
+        padding: 20px;
+        background-color: mediumseagreen;
+        text-align: center;
+      }
+      .skewy1 {
+        width: 200px;
+        padding: 20px;
+        background-color: chartreuse;
+        transform: skewY(-10deg);
+        text-align: center;
+        -ms-transform: skewY(-10deg);
+        /*IE*/
+        -webkit-transform: skewY(-10deg);
+        /*Safari and Chrome*/
+      }
+      .skewy2 {
+        width: 200px;
+        padding: 20px;
+        background-color: darkgoldenrod;
+        text-align: center;
+        transform: skewY(10deg);
+        -ms-transform: skewY(10deg);
+        /*IE*/
+        -webkit-transform: skewY(10deg);
+        /*Safari and Chrome*/
+      }
+       .skewy3 {
+        width: 200px;
+        padding: 20px;
+        background-color: darkcyan;
+        transform: skewY(-10deg);
+        text-align: center;
+        -ms-transform: skewY(-10deg);
+        /*IE*/
+        -webkit-transform: skewY(-10deg);
+        /*Safari and Chrome*/
+      }
+      .skewy4 {
+        width: 200px;
+        padding: 20px;
+        background-color: red;
+        text-align: center;
+        transform: skewY(10deg);
+        -ms-transform: skewY(10deg);
+        /*IE*/
+        -webkit-transform: skewY(10deg);
+        /*Safari and Chrome*/
+      }
+    </style>
+  </head>
+  <body style="margin: 40px;">
+    <p>Skew(y) property defines y values of the object</p>
+    <div class="normalval">This is without skewY method</div>
+    <div class="skewy1">skewY:-10deg;</div>
+    <div class="skewy2">skewY:10deg;</div>
+    <div class="skewy3">skewY:-10deg;</div>
+    <div class="skewy4">skewY:10deg;</div>
+
+  </body>
+</html>

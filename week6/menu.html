@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu Example</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            height: 100px;
+            width: 100%;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: red;
+        }
+        nav a:hover {
+            color: white;
+            background-color: hotpink;
+        }
+        ul  {
+            list-style-type: none;
+        }
+        ul li {
+            float : left ;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            background-color: greenyellow;
+        }
+        ul ul li {
+            position: relative;
+            display: none;
+        }
+        ul li:hover ul li {
+            display: block;
+        }
+
+        ul ul ul  {
+            display: none;
+        }
+
+        ul ul li:hover ul {
+            display: block ;
+            position: absolute;
+            top: 0;
+            left: 150px;
+            width: 150px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Shoes</a>
+          <ul>
+            <li><a href="#">Wedges</a></li>
+
+            <li>
+              <a href="#">Heels</a>
+              <ul>
+                <li><a href="#">Party Wear</a></li>
+
+                <li><a href="#">Regular</a></li>
+
+                <li><a href="#">Long Skirt</a></li>
+
+                <li><a href="#">Short Skirt</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Ankle boots</a></li>
+
+            <li><a href="#">Lace ups</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Clothing</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Footwear</a></li>
+      </ul>
+    </nav>
+
+</body>
+</html>

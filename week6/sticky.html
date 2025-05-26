@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS Sticky</h1>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background: #663399;
+            color: white;
+            padding: 15px;
+            font-size: 1.5em;
+            z-index: 10;
+        }
+        .content {
+            height: 2000px;
+            background: linear-gradient(white, #eee);
+            padding: 20px;
+        }
+         #content1 {
+            width: 400px;
+            border: 16px solid red;
+            background-color: sandybrown;
+            padding: 8px;
+            z-index: 1;
+            position: absolute;
+        }
+        #content2 {
+            width: 400px;
+            border: 16px solid red;
+            background-color: greenyellow;
+            padding: 8px;
+            position: relative;
+            top: 50px;
+            left: 50px
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">I am a sticky header!</div>
+    <div class="content">
+         <div id="content1">
+        <h1>Content 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem du
+            cimus, animi eligendi maiores mollitia aliquam? Corporis,  omnis et. Exerci
+            tationem libero officiis eos in cum laboriosam deserunt  veniam itaque iste quam.
+        </p>
+
+    </div>
+    <div id="content2">
+        <h1>Content 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem du
+            cimus, animi eligendi maiores mollitia aliquam? Corporis,  omnis et. Exerci
+            tationem libero officiis eos in cum laboriosam deserunt  veniam itaque iste quam.
+        </p>
+    </div>
+        Scroll down to see the sticky header in action.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. 
+          Scroll down to see the sticky header in action.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. 
+          Scroll down to see the sticky header in action.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. 
+          Scroll down to see the sticky header in action.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. 
+          Scroll down to see the sticky header in action.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. 
+    </div>
+    
+</body>
+</html>

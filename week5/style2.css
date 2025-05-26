@@ -1,0 +1,41 @@
+.title{
+    color: green;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: burlywood;
+    border: 1px dotted blue;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+}
+.title:hover{
+    text-decoration: none;
+    background-color: rgb(92, 106, 168);
+}
+.content{
+    background-color: burlywood;
+    border: 1px dotted blue;
+    border-radius: 10px;
+    width: 400px;
+    padding: 15px;
+    text-align: justify;
+}
+.main .card h2{
+    font-size: 30px;
+}
+body .main h1.title{
+    font-size: 50px;
+}
+.main .card p.content i{
+    color: red;
+    font-size: 30px;
+}
+
+#Name{
+    color: rgb(117, 11, 255);
+    font-size: 30px;
+}
+.main .card em{
+    text-decoration: underline;
+}

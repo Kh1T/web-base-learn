@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .parent {
+        border: 5px solid green;
+        background-color: pink;
+        padding: 10px;
+        box-shadow: 10px 5px 10px yellow;
+      }
+
+      .child {
+        border: 3px solid blue;
+        background-color: red;
+        padding: 10px;
+        box-shadow: inherit;
+        /*optional as it already acquires parent property in this case*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h4 class="parent">
+        I am the parent class with box shadow:10px 5px 10px yellow
+      </h4>
+    </div>
+    <div class="child">
+      <h4 class="parent">
+        I am a child class but i am using the parent class(with name parent) and
+        I will inherit the box-shadow property of the parent class because of
+        box-shadow: inherit;
+      </h4>
+      .
+    </div>
+  </body>
+</html>

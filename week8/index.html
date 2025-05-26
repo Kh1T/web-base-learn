@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .with-scale {
+        width: 150px;
+        height: 100px;
+        padding: 10px;
+        margin-left: 100px;
+        margin-top: 120px;
+        background-color: papayawhip;
+        text-align: center;
+        border: 2px solid black;
+      }
+      .with-scale {
+        transition: transform 0.5s;
+        margin-left: 90px;
+      }
+      .with-scale:hover {
+        transform: scale(2, 1.5);
+        background-color: khaki;
+        margin-left: 90px;
+        -ms-transform: scale(2, 1.5);
+        -webkit-transform: scale(2, 1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="with-scale" >
+      <h3>Container X</h3>
+    </div>
+  </body>
+</html>
