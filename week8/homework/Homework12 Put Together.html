@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 12 Put Together</title>
+    <style>
+      .with-scale {
+        width: 150px;
+        height: 100px;
+        padding: 10px;
+        margin-left: 90px;
+        background-color: #4caf50;
+        text-align: center;
+        border: 2px solid black;
+        transition: transform 0.5s;
+      }
+      .with-scale:hover {
+        transform: scale(2, 1.5);
+        background-color: #4caf50;
+        margin-left: 90px;
+        -ms-transform: scale(2, 1.5);
+        -webkit-transform: scale(2, 1.5);
+      }
+      .normalval {
+        width: 200px;
+        padding: 20px;
+        background-color: #ff9800;
+        text-align: center;
+      }
+      hr {
+        margin: 8px 0;
+        border: 1px solid black;
+      }
+      .skewy1 {
+        width: 200px;
+        padding: 20px;
+        background-color: #8bc34a;
+        transform: skewY(-10deg);
+        text-align: center;
+        -ms-transform: skewY(-10deg);
+        -webkit-transform: skewY(-10deg);
+      }
+      .skewy2 {
+        width: 200px;
+        padding: 20px;
+        background-color: #e91e63;
+        text-align: center;
+        transform: skewY(10deg);
+        -ms-transform: skewY(10deg);
+        -webkit-transform: skewY(10deg);
+      }
+      .main-div {
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        border-radius: 50%;
+        margin-left: 100px;
+        border: 2px dotted black;
+        text-align: center;
+      }
+      .main-div .multiple-transform {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #009688;
+        transition: transform 3s linear;
+      }
+      .main-div .multiple-transform:hover {
+        transform: rotate(360deg) scale(1.5) skewY(-20deg);
+      }
+      .shorthand-css {
+        background: rgba(76, 175, 80, 0.5);
+        color: #fffde7;
+        transform: translate(1px, -170px);
+        transition: background-color 3s;
+      }
+      .shorthand-css:hover {
+        background-color: #388e3c;
+      }
+      .transition-delay {
+        margin: auto;
+        width: 80%;
+        background-color: #263238;
+        color: #ffeb3b;
+        border: 5px solid;
+        padding: 5px;
+        transition-property: color;
+        transition-duration: 3s;
+        transition-delay: 1s;
+      }
+      .transition-delay:hover {
+        color: #f44336;
+      }
+      .timing-div {
+        position: relative;
+        margin: 20px;
+        width: 120px;
+        text-align: center;
+        border-radius: 5%;
+        background: #ffeb3b;
+        transition-property: width;
+        transition-duration: 1s;
+        padding: 5px;
+        border: 3px solid #4caf50;
+        height: 20px;
+      }
+      .ease { transition-timing-function: ease; }
+      .linear { transition-timing-function: linear; }
+      .easein { transition-timing-function: ease-in; }
+      .easeout { transition-timing-function: ease-out; }
+      .easeinout { transition-timing-function: ease-in-out; }
+      .timing-div:hover {
+        width: 80%;
+      }
+      .multi-transition-div {
+        padding: 5px;
+        text-align: center;
+        border: 3px solid #4caf50;
+        width: 150px;
+        height: 20px;
+        background-color: #ff9800;
+        transition: width 2s, height 4s, background-color 6s, border 5s;
+      }
+      .multi-transition-div:hover {
+        width: 300px;
+        height: 300px;
+        background-color: #009688;
+        border: 6px double #388e3c;
+      }
+      .all-transition-div {
+        padding: 5px;
+        text-align: center;
+        border: 3px solid #4caf50;
+        width: 150px;
+        height: 20px;
+        background-color: #ff9800;
+        transition-property: all;
+        transition-duration: 0.4s;
+      }
+      .all-transition-div:hover {
+        width: 340px;
+        height: 340px;
+        background-color: #00bcd4;
+        border: 4px double #4caf50;
+      }
+      .flexbox-container {
+        margin: 10px;
+        display: flex;
+        background-color: #cddc39;
+      }
+      .child-items {
+        padding: 5px;
+        border: 1px solid #009688;
+        background-color: #ff5722;
+      }
+      .main-lf {
+        padding: 10px;
+        width: 410px;
+        border: 8px solid #4caf50;
+      }
+      .left-float {
+        width: 150px;
+        height: 50px;
+        border: 3px solid #009688;
+        float: left;
+        padding-left: 5px;
+        margin: 0 5px;
+      }
+      .main-rf2 {
+        padding: 10px;
+        width: 410px;
+        border: 8px solid #cddc39;
+      }
+      .right-float-img {
+        width: 190px;
+        height: 180px;
+        border: 1px solid #00bcd4;
+        float: right;
+        padding-left: 2px;
+        margin: 0 5px;
+      }
+      #box-border-l {
+        border: 2px solid #f44336;
+        padding: 10px;
+        box-shadow: 20px 5px #4caf50;
+      }
+      #box-border-2 {
+        border: 4px solid #009688;
+        padding: 10px;
+        box-shadow: -20px -10px #388e3c;
+      }
+      .parent {
+        border: 5px solid #009688;
+        background-color: #ffebee;
+        padding: 10px;
+        box-shadow: 10px 5px 10px #ffeb3b;
+      }
+      .child {
+        border: 3px solid #388e3c;
+        background-color: #e91e63;
+        padding: 10px;
+        box-shadow: inherit;
+      }
+      .text_shadow_no_color {
+        text-shadow: 1px 0.8px 2px #4caf50;
+      }
+      .text_shadow_color {
+        text-shadow: 0px 0px 3px #00bcd4;
+      }
+      .single_text_shadow {
+        text-shadow: 0.5px 1.8px 1px #ff5722;
+      }
+      .multi_text_shadow_2 {
+        text-shadow: 0.5px 0.1em 0.5px #ff5722, 3px 1px #009688;
+      }
+      .multi_text_shadow_3 {
+        text-shadow: 0.5px 0.1em 0.5px #ff5722, 3px 1px #009688, 6px 0px 1px #ffeb3b;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hover Over the below Area:</p>
+    <div class="with-scale">
+      <h3>Increase width 2 times and height 1.5 times</h3>
+    </div>
+    <hr>
+    <p>Skew(y) property defines y values of the object</p>
+    <div class="normalval">This is without skewY method</div>
+    <div class="skewy1">skewY:-10deg;</div>
+    <div class="skewy2">skewY:10deg;</div>
+    <hr>
+    <h3>Example for CSS Multiple Transforms</h3>
+    <div class="main-div">
+      <div class="multiple-transform"></div>
+    </div>
+    <hr>
+    <h2>Text in Transparent Box inside an Image</h2>
+    <img src="https://picsum.photos/200" alt="Notebook" style="width: 400px" />
+    <div class="shorthand-css">
+      <h3>Example of CSS transition shorthand</h3>
+      <p>Hover over Me to see the effect</p>
+    </div>
+    <hr>
+    <div class="transition-delay">
+      <h2>When you hover over me, the transition will start after 1s</h2>
+      <p>Text & Border will start changing after a delay of 1s</p>
+    </div>
+    <hr>
+    <h2>CSS transition-timing-function Property</h2>
+    <section style="border: 2px solid slateblue">
+      <div class="timing-div ease">EASE</div>
+      <div class="timing-div linear">LINEAR</div>
+      <div class="timing-div easein">EASE-IN</div>
+      <div class="timing-div easeout">EASE-OUT</div>
+      <div class="timing-div easeinout">EASE-IN-OUT</div>
+    </section>
+    <h2>Multiple properties in transition</h2>
+    <div class="multi-transition-div">Hover Over Me</div>
+    <hr>
+    <h2>Transition all</h2>
+    <div class="all-transition-div">Hover Over Me</div>
+    <div class="flexbox-container">
+      <div class="child-items">Item 1</div>
+      <div class="child-items">Item 2</div>
+      <div class="child-items">Item 3</div>
+      <div class="child-items">Item 4</div>
+      <div class="child-items">Item 5</div>
+    </div>
+    <div class="main-lf">
+      <p>
+        <span class="left-float"> The float is Left. </span>
+        The span adds float:left to move itself to the left of this paragraph.
+        If the length of the paragraph will be more, then the content of the
+        paragraph will go down & will continue just below the span which is just
+        before it.
+      </p>
+    </div>
+    <hr>
+    <div class="main-rf2">
+      <h5>
+        <img class="right-float-img" src="https://picsum.photos/200" />
+        <u>Image floats to the right</u>
+      </h5>
+      <p>
+        The image property uses float:right to move to the right of this
+        paragraph & the content of the paragraph wraps around this image.
+      </p>
+    </div>
+    <br>
+    <hr>
+    <div id="box-border-l">
+      <h3>Horizontal offset is 20px and vertical offset is 5px.</h3>
+      <p>
+        Positive values of an x-offset mean shadow will be displaced towards the
+        right side along the x-axis
+      </p>
+      <p>
+        Positive values of a y-offset means shadow will be displaced towards the
+        bottom side along the y-axis
+      </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="box-border-2">
+      <h3>Horizontal offset is -20px and vertical offset is -10px.</h3>
+      <p>
+        Negative values of an x-offset mean shadow will be displaced towards the
+        left side along the x-axis
+      </p>
+      <p>
+        Negative values of a y-offset means shadow will be displaced towards the
+        top side along the y-axis
+      </p>
+    </div>
+
+    <hr>
+    <div>
+      <h4 class="parent">
+        I am the parent class with box shadow:10px 5px 10px yellow
+      </h4>
+    </div>
+    <div class="child">
+      <h4 class="parent">
+        I am a child class but i am using the parent class(with name parent) and
+        I will inherit the box-shadow property of the parent class because of
+        box-shadow: inherit;
+      </h4>
+    </div>
+
+    <hr>
+    <div>
+      <p class="text_shadow_no_color">
+        Here, there is no color for the text shadow
+      </p>
+      <p class="text_shadow_color">This uses the Aqua color of the text shadow</p>
+    </div>
+    <hr>
+    <div class="single_text_shadow">
+      <h2>This uses single text shadow property</h2>
+    </div>
+    <div class="multi_text_shadow_2">
+      <h2>And this contains 2 text shadows in div</h2>
+    </div>
+    <div class="multi_text_shadow_3">
+      <h2>This has 3 text shadows in div</h2>
+    </div>
+  </body>
+</html>
