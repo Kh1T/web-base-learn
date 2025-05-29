@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Generate Table</title>
+</head>
+<body>
+    <h1>Javascript Generate Table</h1>
+    <table border="1" cellpadding="7" cellspacing="0" width="500">
+        <script>
+            let j = 1;
+            let num = 1;
+            let color = "";
+            while (j <= 6) {
+                color = (j % 2 === 1) ? "white" : "lightblue";
+                document.write('<tr bgcolor="' + color + '">');
+                for (let i = 1; i <= 6; i++) {
+                    document.write("<td>Data" + num + "</td>");
+                    num++;
+                }
+                document.write("</tr>");
+                j++;
+            }
+        </script>
+    </table>
+</body>
+</html>

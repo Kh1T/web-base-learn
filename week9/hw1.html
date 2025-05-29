@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator & Table Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: repeating-linear-gradient(0deg, #eaeaea 0px, #eaeaea 1px, transparent 1px, transparent 40px),
+                              repeating-linear-gradient(90deg, #eaeaea 0px, #eaeaea 1px, transparent 1px, transparent 40px);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto 0 auto;
+            background: transparent;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            flex: 0 0 120px;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .form-group input[type="text"] {
+            flex: 1;
+            padding: 8px 12px;
+            font-size: 1.2rem;
+            border: 2px solid #888;
+            border-radius: 3px;
+            outline: none;
+            transition: border 0.2s;
+            min-width: 0;
+        }
+        .form-group input[type="text"]:focus {
+            border: 2px solid #1976d2;
+        }
+        .operators {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+            margin-left: 130px;
+            flex-wrap: wrap;
+        }
+        .operators label {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-right: 0;
+            white-space: nowrap;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 18px auto 0 auto;
+            padding: 12px 0;
+            background: #189cff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #0b7dda;
+        }
+        #calc-result, #table-result {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 1.1rem;
+            color: #222;
+            min-height: 24px;
+        }
+        /* Table styles */
+        #generated-table {
+            margin: 18px auto 0 auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 500px;
+        }
+        #generated-table td, #generated-table th {
+            border: 2px solid #222;
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 700px) {
+            .container {
+                max-width: 98vw;
+                padding: 0 4vw;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .form-group label {
+                font-size: 1rem;
+                flex: 0 0 90px;
+            }
+            .form-group input[type="text"] {
+                font-size: 1rem;
+                padding: 7px 8px;
+            }
+            .btn {
+                width: 100%;
+                font-size: 1.1rem;
+                padding: 10px 0;
+            }
+            #generated-table {
+                width: 100%;
+                font-size: 1rem;
+            }
+            #generated-table td, #generated-table th {
+                font-size: 1rem;
+                width: 40px;
+                height: 30px;
+            }
+            .operators {
+                margin-left: 0;
+                gap: 10px;
+                font-size: 0.95rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 2vw;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            .form-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .form-group label {
+                margin-bottom: 4px;
+                flex: none;
+            }
+            .operators {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 0;
+                gap: 6px;
+            }
+            .btn {
+                width: 100%;
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Calculator Section -->
+        <div class="section">
+            <h1>Calculator</h1>
+            <div class="form-group">
+                <label for="numA">Enter A:</label>
+                <input type="text" id="numA" placeholder="Enter A">
+            </div>
+            <div class="form-group">
+                <label for="numB">Enter B:</label>
+                <input type="text" id="numB" placeholder="Enter B">
+            </div>
+            <div class="form-group">
+                <label>Operator:</label>
+                <div class="operators">
+                    <label><input type="radio" name="op" value="add" checked> Addition</label>
+                    <label><input type="radio" name="op" value="sub"> Substruction</label>
+                    <label><input type="radio" name="op" value="mul"> Multiplication</label>
+                    <label><input type="radio" name="op" value="div"> Division</label>
+                </div>
+            </div>
+            <button class="btn" onclick="calculate()">Calculate</button>
+            <div id="calc-result">Result Will be here</div>
+        </div>
+
+        <!-- Table Generator Section -->
+        <div class="section">
+            <h1>Javascript Generate Table</h1>
+            <div class="form-group">
+                <label for="rows">Enter Rows:</label>
+                <input type="text" id="rows" placeholder="Enter number of rows">
+            </div>
+            <div class="form-group">
+                <label for="cols">Enter Cols:</label>
+                <input type="text" id="cols" placeholder="Enter number of cols">
+            </div>
+            <button class="btn" onclick="generateTable()">Generate</button>
+            <div id="table-result">
+                <table id="generated-table">
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            const a = Number(document.getElementById('numA').value);
+            const b = Number(document.getElementById('numB').value);
+            const op = document.querySelector('input[name="op"]:checked').value;
+            let result = '';
+            if (isNaN(a) || isNaN(b)) {
+                result = "Please enter valid numbers.";
+            } else {
+                switch(op) {
+                    case 'add': result = a + b; break;
+                    case 'sub': result = a - b; break;
+                    case 'mul': result = a * b; break;
+                    case 'div': result = b !== 0 ? (a / b) : "Cannot divide by zero"; break;
+                }
+            }
+            document.getElementById('calc-result').textContent = "Result: " + result;
+        }
+
+        function generateTable() {
+            const rows = Number(document.getElementById('rows').value);
+            const cols = Number(document.getElementById('cols').value);
+            let html = '<table id="generated-table">';
+            if (isNaN(rows) || isNaN(cols) || rows < 1 || cols < 1) {
+                html += '</table>';
+                document.getElementById('table-result').innerHTML = html;
+                return;
+            }
+            for (let i = 0; i < rows; i++) {
+                html += '<tr>';
+                for (let j = 0; j < cols; j++) {
+                    html += '<td></td>';
+                }
+                html += '</tr>';
+            }
+            html += '</table>';
+            document.getElementById('table-result').innerHTML = html;
+        }
+    </script>
+</body>
+</html>
