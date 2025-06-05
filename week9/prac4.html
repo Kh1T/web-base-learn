@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Function Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 28px 22px 22px 22px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .btn {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: block;
+            margin: 0 auto 18px auto;
+        }
+        .btn:hover {
+            background: #125ea7;
+        }
+        #result {
+            font-size: 1.1rem;
+            color: #333;
+            min-height: 22px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript Function</h1>
+        <button class="btn" onclick="showMessage()">Click Me</button>
+        <div id="result">Smoting will be here ...</div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById("result").innerHTML = "Good Evening Everyone";
+        }
+    </script>
+</body>
+</html>
